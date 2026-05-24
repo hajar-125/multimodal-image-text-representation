@@ -1,0 +1,6 @@
+pandas
+Pillow
+torch
+torchvision
+transformers
+open_clip_torch

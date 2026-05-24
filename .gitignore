@@ -1,0 +1,19 @@
+# Dataset — trop lourd
+flickr8K/
+flickr8k/
+
+# Checkpoints
+checkpoints/
+*.pt
+*.pth
+
+# Environnement virtuel
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Mac
+.DS_Store
