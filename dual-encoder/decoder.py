@@ -222,13 +222,16 @@ class CaptioningModel(nn.Module):
         # Génération
         output_ids = self.gpt2.generate(
             inputs_embeds=inputs_embeds,
-            max_new_tokens=max_new_tokens,
-            num_beams=num_beams,
-            temperature=temperature,
-            do_sample=do_sample,
+            max_new_tokens=25,
+            num_beams=5,
+            temperature=0.7,
+            do_sample=False,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             early_stopping=True,
+            repetition_penalty=1.5,
+            no_repeat_ngram_size=3,
+            length_penalty=0.8,
         )
         # Décodage : on ignore le BOS
         generated = output_ids[0]
